@@ -49,7 +49,7 @@ export const registerController= async (req,res)=>{
             success:true,
             message:"User  created Successfully",
             user,
-        });
+        });// due to this user is last i can see the user responds in postman
 
 
 
@@ -58,7 +58,8 @@ export const registerController= async (req,res)=>{
         console.log(e);
         res.status(400).send({
             message:"Error in register controller",
-            success:false,error
+            success:false,
+            e,
         })
     }
 
